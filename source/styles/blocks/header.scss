@@ -1,0 +1,26 @@
+.header {
+    min-height: 600px;
+    overflow: hidden;
+    position: relative;
+    background: #9ED1FA url("/assets/img/bg-header.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.header__socials {
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    left: 30px;
+}
+
+.header__title {
+    position: absolute;
+    @include centered(y);
+    width: 100%;
+    height: 100%;
+}
+
+.header__user-block {
+    position: absolute;
+    @include centered;
+}

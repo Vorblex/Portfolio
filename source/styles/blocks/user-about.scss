@@ -1,0 +1,23 @@
+.user-about {
+    max-width: 443px;
+    margin-bottom: 30px;
+}
+
+.user-about__pic {
+    height: 392px;
+    margin-bottom: 30px;    
+    background-position: center 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.user-about__subtitle {
+    text-align: center;    
+}
+
+.user-about__text p {
+    font-size: 16px;
+    @include roboto;
+    color: $blue;
+}
+

@@ -1,0 +1,30 @@
+.subtitle {
+    position: relative;
+    display: inline-block;
+    max-width: 450px;
+    font-size: 35px;
+    padding: 0 55px;
+    margin-bottom: 30px;
+    @include berni;
+    color: $blue;
+
+    $margin: 0;
+    
+        &::after, &:before {
+            content: "";
+            position: absolute;
+            top: .5em;
+            display: block;
+            width: 22px;
+            height: 5px;
+            background: rgba($black, .2);
+        }
+    
+        &::after {
+            right: $margin;
+        }
+        
+        &::before {
+            left: $margin;
+        }
+}

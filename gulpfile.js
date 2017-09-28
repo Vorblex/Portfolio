@@ -6,7 +6,7 @@ global.$ = {
     task: require('./gulp/paths/tasks.js'),
     jsFoundation: require('./gulp/paths/js.foundation.js'),
     cssFoundation: require('./gulp/paths/css.foundation.js'),
-    app: require('./gulp/paths/app.js'),
+    app: require('./gulp/paths/app.js')
   },
   gulp: require('gulp'),
   del: require('del'),
@@ -19,9 +19,9 @@ global.$ = {
   fs: require('fs'),
   gp: require('gulp-load-plugins')({
     rename: {
-      'gulp-replace-task': 'replaceTask',
-    },
-  }),
+      'gulp-replace-task': 'replaceTask'
+    }
+  })
 };
 
 $.path.task.forEach((taskPath) => {

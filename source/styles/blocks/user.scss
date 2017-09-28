@@ -1,0 +1,26 @@
+.user__pic {
+    display: block;
+    margin: auto;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    background-position: center;
+    background-size: cover;
+}
+
+.user__name {
+    @include roboto(medium);
+    font-size: 35px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.user__desc {
+    @include roboto(light);
+    font-size: 16px;
+    color: rgba( $white, .8);
+    text-align: center;
+}

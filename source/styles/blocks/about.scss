@@ -1,0 +1,32 @@
+.about {
+    min-height: 600px;    
+    display: flex;
+}
+
+.about__left, .about__right {
+    width: 50%;
+    position: relative;
+    padding-top: 20px;
+}
+
+.about__left {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    background: $gray;
+}
+
+.about__title-section {
+    text-align: center;
+}
+
+.about__title {
+    margin-top: -73px;
+}
+
+.about__right {
+    background: $beige;
+}
+
+

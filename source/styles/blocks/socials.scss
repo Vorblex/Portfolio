@@ -1,0 +1,21 @@
+.socials__item {
+    @include inlineblock(middle);
+    margin-right: 20px;
+}
+
+.socials__link {
+    display: block;
+    font-size: 0;
+    opacity: .5;
+    transition: .3s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.socials__icon {
+    width: 32px;
+    height: 22px;
+    fill: $white;
+}

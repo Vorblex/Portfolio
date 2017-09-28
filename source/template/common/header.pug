@@ -1,2 +1,20 @@
 header.header
- 
+  ul.socials.header__socials
+    each item in [{name:"vk", link:"https://vk.com/"}, {name:"github", link: "https://github.com/"}, {name:"in", link: "https://www.linkedin.com/"}]
+      li.socials__item
+        a(href=`${item.link}`).socials__link= item.name
+          svg.socials__icon
+            use(xlink:href=`/assets/img/sprite.svg#${item.name}`)
+    
+  a(href="#").hamburger
+    .hamburger__elem  
+  .header__title
+    svg.section-title
+      use(xlink:href="/assets/img/sprite.svg#portfolio_header")
+    .user.header__user-block
+      .user__pic(style=`background-image: url("/assets/img/user.jpg")`) 
+      .user__name Воробей Александр
+      .user__desc Личный сайт веб разработчика 
+  a(href="#").down-arrow
+    svg.down-arrow__icon
+      use(xlink:href="/assets/img/sprite.svg#arrow_down")     

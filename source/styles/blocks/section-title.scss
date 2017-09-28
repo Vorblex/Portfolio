@@ -1,0 +1,8 @@
+.section-title {
+    position: absolute;
+    @include centered();
+    height: 100%;
+    width: 80%;
+    opacity: .06;
+    fill: $white;
+}

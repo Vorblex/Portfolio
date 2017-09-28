@@ -5,7 +5,7 @@ module.exports = function () {
   $.gulp.task('sprite', () => {
     let spriteData = $.gulp.src('./source/icons/*.png').pipe($.gp.spritesmith({
       imgName: 'sprite.png',
-      cssName: 'sprite.css',
+      cssName: 'sprite.scss',
       imgPath: '/assets/img/sprite.png',
       cssFormat: 'css',
       algorithm: 'left-right',
@@ -15,7 +15,7 @@ module.exports = function () {
       .pipe($.gulp.dest('./source/images')); // путь куда записываем спрайт
 
     let cssStream = spriteData.css
-      .pipe($.gulp.dest('./source/style/common')); // путь куда записываем файл стилей для спрайта
+      .pipe($.gulp.dest('./source/styles/_misc')); // путь куда записываем файл стилей для спрайта
 
     return $.merge(imgStream, cssStream);
   });
