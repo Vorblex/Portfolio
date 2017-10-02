@@ -1,13 +1,23 @@
 {
     "skills": [
         {
-            "Frontend": ["HTML5", "CSS3", "JavaScript"]
+            "Frontend": [
+                {"HTML5": "250 282.6"}, 
+                {"CSS3": "230 282.6"}, 
+                {"JavaScript": "200 282.6"}]
         },
         {
-            "Backend": ["PHP", "mySQL", "Node.js", "Mongo.db"]
+            "Backend": [
+                {"PHP": "100 282.6"}, 
+                {"mySQL": "115 282.6"}, 
+                {"Node.js": "190 282.6"}, 
+                {"Mongo.db": "228 282.6"}] 
         },
         {
-            "WorkFlow": ["Git", "Gulp", "Yarn"]
+            "WorkFlow": [
+                {"Git": "260 282.6"}, 
+                {"Gulp": "275 282.6"}, 
+                {"Yarn": "275 282.6"}]
         }
     ]
 }

@@ -1,0 +1,15 @@
+.skill {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-right: 40px;
+    margin-bottom: 10px;    
+}
+
+.skill__text {
+    position: absolute;
+    @include centered;
+    font-size: 14;
+    @include roboto(medium);
+    color: $circleSecond;
+}

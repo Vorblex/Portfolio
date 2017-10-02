@@ -1,0 +1,12 @@
+.skills-section__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -40px;    
+}
+
+.skills-section__title {
+    font-size: 28px;
+    @include roboto(medium);
+    color: $blue;
+    margin-bottom: 10px;
+}
