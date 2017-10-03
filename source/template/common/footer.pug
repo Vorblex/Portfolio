@@ -1,0 +1,24 @@
+footer.footer
+  .footer__top
+    nav.nav.footer__nav
+      ul.nav__list
+        each link, title in navigaiton
+          li.nav__item
+            a(href=`${link}`).nav__link= title 
+      
+
+
+    ul.socials
+      each item in [{name:"vk", link:"https://vk.com/"}, {name:"github", link: "https://github.com/"}, {name:"in", link: "https://www.linkedin.com/"}]
+        li.socials__item
+          a(href=`${item.link}`).socials__link= item.name
+            svg.socials__icon
+              use(xlink:href=`/assets/img/sprite.svg#${item.name}`)
+
+  .footer__bottom
+    .footer__info
+      p.
+        Я веб-разработчик из Киева, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+    .footer__copyright
+      p.
+        © Александр Воробей | создано с любовью в LoftSchool | 2017

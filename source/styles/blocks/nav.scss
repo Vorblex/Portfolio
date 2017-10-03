@@ -1,0 +1,21 @@
+.nav__item {
+    @include inlineblock;
+    margin-right: 40px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nav__link {
+    display: block;
+    text-decoration: none;
+    @include roboto(medium);
+    font-size: 16px;
+    color: $white;
+    transition: .3;
+
+    &:hover {
+        color: $green;
+    }
+}

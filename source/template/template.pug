@@ -2,15 +2,15 @@ block variables
 include mixins/mixins
 
 doctype html
-html
+html(lang="ru")
   head
     meta(charset="utf-8")
     title #{title}
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
     meta(content="" name="author")
     meta(content="" name="description")
     meta(content="" name="keywords")
-    meta(content="width=device-width, initial-scale=1" name="viewport")
-    meta(content="ie=edge" http-equiv="x-ua-compatible")
 
     //- favicon block start
     //- favicon block end
@@ -29,4 +29,6 @@ html
   body
     .wrapper
       include ./common/header
-      block content
+      .maincontent
+        block content
+      include ./common/footer
