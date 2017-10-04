@@ -1,0 +1,33 @@
+.contacts {
+    width: 380px;
+    padding: 30px 40px 30px;
+    border-radius: 5px;
+    background: rgba($white, .85)
+}
+
+.contacts__title {
+    text-align: center;
+}
+
+.contacts__item {
+    margin-bottom: 20px;
+}
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.contacts__icon {
+    width: 25px;
+    height: 25px;
+    fill: $green;
+    margin-right: 10px;
+}
+
+.contacts__text {
+    @include roboto(medium);
+    font-size: 16px;
+    color: $blue;
+}

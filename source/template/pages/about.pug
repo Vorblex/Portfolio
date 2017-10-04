@@ -61,4 +61,29 @@ block content
                             .skill__text=name 
                        
 
-  section.section.map   
+  section.section.map
+    .map__container#map
+    .contacts.map__contacts
+      .contacts__title
+        .subtitle контакты
+      ul.contacts__list
+        li.contacts__item
+          a(class="contacts__link" href="skype:vorblex")
+            svg.contacts__icon
+              use(xlink:href="assets/img/sprite.svg#skype")
+            span.contacts__text vorblex  
+        li.contacts__item
+          a(class="contacts__link" href="mailto:vorblex@gmail.com")
+            svg.contacts__icon
+              use(xlink:href="assets/img/sprite.svg#envelope2")
+            span.contacts__text vorblex@gmail.com  
+        li.contacts__item
+          a(class="contacts__link" href="tel:0930647501")
+            svg.contacts__icon
+              use(xlink:href="assets/img/sprite.svg#phone_n")
+            span.contacts__text +38 093 064 75 01  
+        li.contacts__item
+          a(class="contacts__link" href="https://www.google.ru/maps/@50.5092848,30.4531397,18z" target="_blank")
+            svg.contacts__icon
+              use(xlink:href="assets/img/sprite.svg#map_marker")
+            span.contacts__text г.Киев, ул. Макеевская  
