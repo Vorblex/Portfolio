@@ -1,0 +1,55 @@
+extends ../template
+
+block variables
+  - var title = "Works page"
+
+block content
+  section.section.works
+    +triangle("triangle_color_lightBeige") 
+
+    .works__title-section
+      +title("Мои работы", "works_header", "works__title")
+      
+    .works__slider
+      .slider
+        .slider__info
+          .slider__info-inner
+            .slider__title
+              .subtitle Сайт школы онлайн образования
+            .slider__desc HTML , CSS, JAVASCRIPT
+            .slider__button
+              a(href="#").button Посмотреть сайт
+        .slider__view
+          img(class="slider__img" src="/assets/img/bg-slider.png", alt="slider image")
+        .slider__controls
+          button(type="button").slider__prev
+            img(class="slider__button-img" src="/assets/img/btn-l.jpg", alt="slider thumb")
+          button(type="button").slider__next
+            img(class="slider__button-img" src="/assets/img/btn-r.jpg", alt="slider thumb")
+
+  section.section.reviews
+    .reviews__title
+
+    .reviews__section
+      ul.reviews-list.reviews__reviews-list
+        li.reviews-list__item
+          .review
+            .review__text
+              p
+            .review__person
+              .review__pic
+              span.review__name
+
+    .reviews__contacts
+      .mail-form
+        form(class="mail-form__form" id="mailForm" method="post" action="#")
+          .mail-form__bg
+          .mail-form__fields
+            input(type="text" name="name" placeholder="Имя").input
+            input(type="email" name="email" placeholder="Email").input
+            textarea(placeholder="Введите ваше сообщение").textarea
+
+          .mail-form__buttons
+            button(type="submit")
+            button(type="reset")
+            

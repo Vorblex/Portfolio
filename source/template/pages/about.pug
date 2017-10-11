@@ -5,15 +5,11 @@ block variables
 
 block content
   section.section.about
+    +triangle("triangle_color_gray", "triangle_color_beige")
+
     .about__left  
-      svg(version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewbox="0 0 1000 100" 
-          preserveAspectRatio="none" 
-          class="triangle triangle_color_gray")
-        polygon(points="0,0 0,100 1000,100")
-        .about__title-section
-          +title("Обо мне", "about_header", "about__title")
+      .about__title-section
+        +title("Обо мне", "about_header", "about__title")
       .user-about.about__user-about
         .user-about__pic(style=`background-image: url("/assets/img/user-about.jpg")`)
         .user-about__subtitle
@@ -23,17 +19,9 @@ block content
             Я веб разработчик из Киева. Мне 31 год. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. 
           p.
             Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-          
-
-
+        
 
     .about__right
-      svg(version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewbox="0 0 1000 100" 
-          preserveAspectRatio="none" 
-          class="triangle triangle_color_beige")
-        polygon(points="0,100 1000,0 1000,100 ")
       .about-data
         .about-data__desc.about-user-info
           .about-user-info__title
@@ -42,8 +30,8 @@ block content
             p.
               Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
 
-
         .about-data__content
+        
           ul.skills
             each skillsItem in skills
               each skill, key in skillsItem

@@ -1,0 +1,5 @@
+nav.main-nav
+  ul.main-nav__list
+    each link, title in navigaiton
+      li.main-nav__item
+        a(href=`${link}`).main-nav__link= title

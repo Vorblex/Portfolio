@@ -35,118 +35,118 @@ export default function () {
         center: new google.maps.LatLng(50.510802, 30.433704),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         styles: [
-            {
-              'featureType': 'administrative',
-              'elementType': 'labels.text.fill',
-              'stylers': [
-                {
-                  'color': '#444444'
-                }
-              ]
-            },
-            {
-              'featureType': 'landscape',
-              'elementType': 'all',
-              'stylers': [
-                {
-                  'color': '#ffffff'
-                }
-              ]
-            },
-            {
-              'featureType': 'landscape',
-              'elementType': 'labels',
-              'stylers': [
-                {
-                  'visibility': 'off'
-                }
-              ]
-            },
-            {
-              'featureType': 'poi',
-              'elementType': 'all',
-              'stylers': [
-                {
-                  'visibility': 'off'
-                }
-              ]
-            },
-            {
-              'featureType': 'road.highway',
-              'elementType': 'all',
-              'stylers': [
-                {
-                  'visibility': 'simplified'
-                }
-              ]
-            },
-            {
-              'featureType': 'road.highway',
-              'elementType': 'geometry',
-              'stylers': [
-                {
-                  'color': '#d5d5d5'
-                }
-              ]
-            },
-            {
-              'featureType': 'road.arterial',
-              'elementType': 'geometry.fill',
-              'stylers': [
-                {
-                  'color': '#d6d6d6'
-                }
-              ]
-            },
-            {
-              'featureType': 'road.local',
-              'elementType': 'geometry.fill',
-              'stylers': [
-                {
-                  'color': '#d6d6d6'
-                }
-              ]
-            },
-            {
-              'featureType': 'road.arterial',
-              'elementType': 'labels.icon',
-              'stylers': [
-                {
-                  'visibility': 'off'
-                }
-              ]
-            },
-            {
-              'featureType': 'transit',
-              'elementType': 'all',
-              'stylers': [
-                {
-                  'visibility': 'off'
-                }
-              ]
-            },
-            {
-              'featureType': 'water',
-              'elementType': 'all',
-              'stylers': [
-                {
-                  'color': '#61dac9'
-                },
-                {
-                  'visibility': 'on'
-                }
-              ]
-            },
-            {
-              'featureType': 'water',
-              'elementType': 'labels',
-              'stylers': [
-                {
-                  'color': '#61dac9'
-                }
-              ]
-            }
-          ],
+          {
+            'featureType': 'administrative',
+            'elementType': 'labels.text.fill',
+            'stylers': [
+              {
+                'color': '#444444'
+              }
+            ]
+          },
+          {
+            'featureType': 'landscape',
+            'elementType': 'all',
+            'stylers': [
+              {
+                'color': '#ffffff'
+              }
+            ]
+          },
+          {
+            'featureType': 'landscape',
+            'elementType': 'labels',
+            'stylers': [
+              {
+                'visibility': 'off'
+              }
+            ]
+          },
+          {
+            'featureType': 'poi',
+            'elementType': 'all',
+            'stylers': [
+              {
+                'visibility': 'off'
+              }
+            ]
+          },
+          {
+            'featureType': 'road.highway',
+            'elementType': 'all',
+            'stylers': [
+              {
+                'visibility': 'simplified'
+              }
+            ]
+          },
+          {
+            'featureType': 'road.highway',
+            'elementType': 'geometry',
+            'stylers': [
+              {
+                'color': '#d5d5d5'
+              }
+            ]
+          },
+          {
+            'featureType': 'road.arterial',
+            'elementType': 'geometry.fill',
+            'stylers': [
+              {
+                'color': '#d6d6d6'
+              }
+            ]
+          },
+          {
+            'featureType': 'road.local',
+            'elementType': 'geometry.fill',
+            'stylers': [
+              {
+                'color': '#d6d6d6'
+              }
+            ]
+          },
+          {
+            'featureType': 'road.arterial',
+            'elementType': 'labels.icon',
+            'stylers': [
+              {
+                'visibility': 'off'
+              }
+            ]
+          },
+          {
+            'featureType': 'transit',
+            'elementType': 'all',
+            'stylers': [
+              {
+                'visibility': 'off'
+              }
+            ]
+          },
+          {
+            'featureType': 'water',
+            'elementType': 'all',
+            'stylers': [
+              {
+                'color': '#61dac9'
+              },
+              {
+                'visibility': 'on'
+              }
+            ]
+          },
+          {
+            'featureType': 'water',
+            'elementType': 'labels',
+            'stylers': [
+              {
+                'color': '#61dac9'
+              }
+            ]
+          }
+        ],
         scrollwheel: false,
         mapTypeControl: false,
         panControl: false,
@@ -182,7 +182,7 @@ export default function () {
       Routes.init();
     }
   };
-  if ($('#map').length) {
+  if (map) {
     App.init();
   }
 }

@@ -1,5 +1,6 @@
 .about {
-    min-height: 600px;    
+    position: relative;
+    min-height: $sectionHeight;    
     display: flex;
 }
 

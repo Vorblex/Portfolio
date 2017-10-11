@@ -18,13 +18,17 @@ html(lang="ru")
     link(rel="stylesheet" href="/assets/css/foundation%=suffix=%.css%=version=%")
     link(rel="stylesheet" href="/assets/css/main%=suffix=%.css%=version=%")
 
-    script(src="/assets/js/foundation%=suffix=%.js%=version=%" defer)
-    script(src="/assets/js/app%=suffix=%.js%=version=%" defer)
 
 
   body
     .wrapper
+      include ./common/main-nav
       include ./common/header
       .maincontent
         block content
       include ./common/footer 
+    
+
+    
+    script(src="/assets/js/foundation%=suffix=%.js%=version=%")
+    script(src="/assets/js/app%=suffix=%.js%=version=%")

@@ -1,0 +1,114 @@
+.slider {
+    background: $sliderBackground;
+    height: $sectionHeight;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include tablet {
+        flex-wrap: nowrap;        
+    }
+}
+
+.slider__info {
+    text-align: center;
+    display: flex;
+    height: 100%;
+    width: 50%;
+
+    @include tablet {
+        height: 35%;
+        width: auto;
+    }
+}
+
+.slider__info-inner {
+    max-width: 420px;
+    margin: auto;
+}
+
+.slider__view {
+    position: relative;
+    height: 70%;
+    background: $sliderView;
+    width: 50%;
+
+    @include tablet {
+        order: -1;
+        height: 45%;
+        width: auto;
+    }
+}
+
+.slider__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.slider__desc {
+    padding: 15px;
+    @include roboto(medium);
+    color: $green;
+    font-size: 16px;
+    border: solid rgba(#109c8e, .3);
+    border-left: none;
+    border-right: none;
+    margin-bottom: 40px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: none;
+    cursor: pointer; 
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: $green;
+    @include roboto(medium);
+    color: $white;
+    font-size: 16px;
+    padding: 13px 20px;
+}
+
+.slider__controls {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    background: $sliderControls;
+    width: 50%;
+
+    @include tablet {
+        height: 20%;
+        width: auto;
+    }
+}
+
+.slider__prev, .slider__next {
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    width: 50%; 
+    box-shadow: none;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+}
+
+.slider__button-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
