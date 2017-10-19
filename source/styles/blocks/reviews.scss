@@ -1,0 +1,38 @@
+.reviews {
+    position: relative;
+    min-height: $sectionHeight;
+    padding-top: 20px;
+}
+
+.reviews__bg-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.reviews__bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.reviews__title-section {
+    text-align: center;
+}
+
+.reviews__content {
+    position: relative;
+}
+
+.reviews__section {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.reviews__contacts {
+    display: flex;
+    justify-content: center;
+}

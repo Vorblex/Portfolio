@@ -1,0 +1,36 @@
+.mail-form {
+    position: relative;
+    max-width: 380px;
+    padding-top: 30px;
+}
+
+.mail-form__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 45px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    background: url("/assets/img/bg_mail-form.jpg") center / cover no-repeat;
+}
+
+.mail-form__title {
+    text-align: center;
+}
+
+.mail-form__fields, .mail-form__buttons {
+    position: relative;
+}
+
+
+.mail-form__fields {
+    padding: 0 20px;
+}
+
+.mail-form__buttons {
+    display: flex;
+    height: 45px;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}

@@ -1,5 +1,8 @@
+.nav__list {
+    display: flex;
+}
+
 .nav__item {
-    @include inlineblock;
     margin-right: 40px;
 
     &:last-child {

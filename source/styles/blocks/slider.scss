@@ -6,7 +6,7 @@
     flex-direction: column;
 
     @include tablet {
-        flex-wrap: nowrap;        
+        flex-wrap: nowrap;       
     }
 }
 
@@ -60,21 +60,6 @@
     border-left: none;
     border-right: none;
     margin-bottom: 40px;
-}
-
-.button {
-    display: inline-block;
-    text-decoration: none;
-    box-shadow: none;
-    cursor: pointer; 
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    background: $green;
-    @include roboto(medium);
-    color: $white;
-    font-size: 16px;
-    padding: 13px 20px;
 }
 
 .slider__controls {

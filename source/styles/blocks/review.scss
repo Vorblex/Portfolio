@@ -1,0 +1,49 @@
+.review__icon {
+    width: 32px;
+    height: 28px;
+    fill: #d5d7d8;
+    margin-bottom: 20px;
+}
+
+.review__text {
+    margin-bottom: 25px;
+    
+    p {
+        @include roboto;
+        font-size: 16px;
+        color: $blue;
+        margin-bottom: 10px;
+    }
+}
+
+.review__info {
+    display: flex;
+    align-items: center;
+}
+
+.review__pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-right: 20px;
+}
+
+.review__desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.review__person {
+    @include roboto(bold);
+    font-size: 16px;
+    color: $green;
+}
+
+.review__person-info {
+    @include roboto;
+    font-size: 16px;
+    color: $green;
+}
+

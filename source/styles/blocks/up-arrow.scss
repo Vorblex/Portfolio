@@ -1,0 +1,18 @@
+.up-arrow {
+    position: absolute;
+    z-index: 1;
+    top: -70px;
+    @include centered(x); 
+}
+
+.up-arrow__icon {
+    width: 25px;
+    height: 15px;
+    fill: $white;
+    opacity: .7;
+    transition: .3s;
+
+    &:hover {
+        opacity: 1;
+    }
+}

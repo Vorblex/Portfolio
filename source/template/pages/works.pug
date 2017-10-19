@@ -18,9 +18,11 @@ block content
               .subtitle Сайт школы онлайн образования
             .slider__desc HTML , CSS, JAVASCRIPT
             .slider__button
-              a(href="#").button Посмотреть сайт
+              a(href="#").btn.btn_rounded.btn_iconed Посмотреть сайт
+                svg.btn__icon 
+                  use(xlink:href=`assets/img/sprite.svg#link`)
         .slider__view
-          img(class="slider__img" src="/assets/img/bg-slider.png", alt="slider image")
+          img(class="slider__img" src="/assets/img/bg_slider.png", alt="slider image")
         .slider__controls
           button(type="button").slider__prev
             img(class="slider__button-img" src="/assets/img/btn-l.jpg", alt="slider thumb")
@@ -28,28 +30,53 @@ block content
             img(class="slider__button-img" src="/assets/img/btn-r.jpg", alt="slider thumb")
 
   section.section.reviews
-    .reviews__title
+    .reviews__bg-wrap
+      img(class="reviews__bg" src="/assets/img/bg_reviews.jpg" alt="background")
+    .reviews__title-section
+      +title("Что обо мне говорят", "about_header", "reviews__title")
 
-    .reviews__section
-      ul.reviews-list.reviews__reviews-list
-        li.reviews-list__item
-          .review
-            .review__text
-              p
-            .review__person
-              .review__pic
-              span.review__name
+    .reviews__content
+      .reviews__section
+        ul.reviews-list
+          li.reviews-list__item
+            .review
+              svg.review__icon 
+                use(xlink:href=`assets/img/sprite.svg#quotes`)
+              .review__text
+                p.
+                  Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              .review__info
+                .review__pic(style=`background-image: url("/assets/img/dima.jpg")`)
+                .review__desc
+                  span.review__person Ковальчук Дмитрий 
+                  span.review__person-info основатель Loftschool
+          
+          li.reviews-list__item
+            .review
+              svg.review__icon 
+                use(xlink:href=`assets/img/sprite.svg#quotes`)
+              .review__text
+                p.
+                  Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+              .review__info
+                .review__pic(style=`background-image: url("/assets/img/zar.jpg")`)
+                .review__desc
+                  span.review__person Зар Захаров
+                  span.review__person-info преподаватель
 
-    .reviews__contacts
-      .mail-form
-        form(class="mail-form__form" id="mailForm" method="post" action="#")
+
+      .reviews__contacts
+        .mail-form
           .mail-form__bg
-          .mail-form__fields
-            input(type="text" name="name" placeholder="Имя").input
-            input(type="email" name="email" placeholder="Email").input
-            textarea(placeholder="Введите ваше сообщение").textarea
+          .mail-form__title
+            .subtitle Связаться со мной
+          form(class="mail-form__form" id="mailForm" method="post" action="#")
+            .mail-form__fields
+              input(type="text" name="name" placeholder="Имя").input
+              input(type="email" name="email" placeholder="Email").input
+              textarea(placeholder="Введите ваше сообщение").textarea
 
-          .mail-form__buttons
-            button(type="submit")
-            button(type="reset")
+            .mail-form__buttons
+              button(class="btn btn_transp btn_separated" type="submit") Отправить 
+              button(class="btn btn_transp" type="reset") Очистить
             

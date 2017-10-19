@@ -1,0 +1,51 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    flex: 1;
+    box-shadow: none;
+    cursor: pointer; 
+    outline: none;
+    border: none;
+    background-color: $green;
+    @include roboto(medium);
+    color: $white;
+    font-size: 16px;
+    padding: 13px 20px;
+    transition: .3s;
+
+    &:hover {
+        background: $greenActive;
+    }
+
+    &_rounded {
+        border-radius: 5px;
+    }
+
+    &_iconed {
+        padding-left: 50px;
+    }
+
+    &_separated {
+        border-right: 2px solid;
+        border-right-color: transparentize(#dee3e7, .5);
+    }
+
+    &_transp {
+        background-color: transparentize($green, .15);
+
+        &:hover {
+            background-color: transparentize($greenActive, .7);
+        }
+    }
+}
+
+.btn__icon {
+    position: absolute;
+    left: 18px;
+    @include centered(y);
+    width: 20px;
+    height: 20px;
+    fill: $white;
+}
+

@@ -1,0 +1,15 @@
+.reviews-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 780px;
+    text-align: left;
+    margin-right: -20px;
+}
+
+.reviews-list__item {
+    flex: 1 1 260px;
+    max-width: calc(100% / 2 - 20px);
+    min-width: 260px;
+    margin-right: 20px;
+    margin-bottom: 35px;
+}
