@@ -1,0 +1,27 @@
+.post {
+    padding-bottom: 75px;
+}
+
+.post__date {
+    @include roboto;
+    color: $green;
+    margin-bottom: 25px;
+}
+
+.post__content {
+
+    p {
+        margin-bottom: 10px;
+        @include roboto;
+        font-size: 16px;
+        color: $black;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        min-width: 100%;
+    }
+}

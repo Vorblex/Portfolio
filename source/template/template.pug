@@ -21,10 +21,12 @@ html(lang="ru")
 
 
   body
+    include ./common/main-nav
+    if title == "Blog page"
+      include ./common/menu.pug
     .wrapper
-      include ./common/main-nav
-      include ./common/header
       .maincontent
+        include ./common/header
         block content
       include ./common/footer 
     

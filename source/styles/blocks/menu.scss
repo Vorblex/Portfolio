@@ -1,0 +1,39 @@
+.menu {
+    position: absolute;
+    z-index: 400;
+    top: $sectionHeight;
+    right: 73%;
+    transform: translateY(70px);
+    width: 22.7%;
+}
+
+.menu__item {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.menu__link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    @include roboto;
+    padding: 10px 40px 10px 20px; 
+    font-size: 16px;
+    color: $black;
+    transition: .3s;
+
+    &:hover {
+        @include roboto(bold);
+        color: $green;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        width: 3px;
+        background: $green;
+    }
+}
