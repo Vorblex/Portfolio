@@ -13,6 +13,10 @@
 
         &_beige {
             fill: $beige;
+
+            @include tablet {
+                fill: $gray;
+            }
         }
 
         &_lightBeige {

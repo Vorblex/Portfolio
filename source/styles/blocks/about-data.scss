@@ -1,0 +1,7 @@
+.about-data__content {
+    padding: 0 10px 70px 40px;
+
+    @include tablet {
+        padding: 0 10px 70px 10px;
+    }
+}

@@ -4,7 +4,47 @@
     top: $sectionHeight;
     right: 73%;
     transform: translateY(70px);
-    width: 22.7%;
+    width: 25.7%;
+
+    @include laptop {
+        width: 29.7%;
+        right: 69%;
+    }
+
+    @include tablet {
+        position: fixed;
+        background: $green;
+        right: auto;
+        top: 0;
+        height: 100%;
+        width: 81%;
+        transform: translateY(0px);
+        transform: translateX(-100%);
+    }
+}
+
+.wrapper {
+    // transform: translateX(80%);
+}
+
+.menu__toggle {
+    @include tablet {
+        position: absolute;
+        right: -9px;
+        @include centered(y);
+        width: 60px;
+        height:60px;
+        border-radius: 50%;
+        background: $green;
+    }
+}
+
+.menu__list {
+    @include tablet {
+        position: relative;
+        @include centered(y);
+        // visibility: hidden;
+    }
 }
 
 .menu__item {
@@ -20,7 +60,7 @@
     padding: 10px 40px 10px 20px; 
     font-size: 16px;
     color: $black;
-    transition: .3s;
+    transition: opacity .3s, color .3s;
 
     &:hover {
         @include roboto(bold);
@@ -35,5 +75,19 @@
         right: 20px;
         width: 3px;
         background: $green;
+    }
+
+    @include tablet {
+        color: $white;
+        opacity: .7;
+
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+            opacity: 1;
+            color: $white;
+        }
     }
 }

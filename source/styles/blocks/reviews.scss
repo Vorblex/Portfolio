@@ -2,6 +2,10 @@
     position: relative;
     min-height: $sectionHeight;
     padding-top: 20px;
+
+    @include phone {
+        padding-bottom: 120px;
+    }
 }
 
 .reviews__bg-wrap {

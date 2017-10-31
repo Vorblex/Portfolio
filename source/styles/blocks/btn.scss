@@ -35,7 +35,7 @@
         background-color: transparentize($green, .15);
 
         &:hover {
-            background-color: transparentize($greenActive, .7);
+            background-color: transparentize($greenActive, .3); 
         }
     }
 }

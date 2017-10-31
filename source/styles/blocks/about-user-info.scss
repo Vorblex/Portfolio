@@ -7,8 +7,17 @@
     text-align: center;
 }
 
+.about-user-info__text {
+    margin: auto;
+
+    @include laptop {
+        max-width: 500px;
+        text-align: center;
+    }
+}
+
 .about-user-info__text p {
     font-size: 16px;
     @include roboto;
-    color: $blue;    
+    color: $blue;
 }

@@ -1,8 +1,17 @@
 .user-about {
+    flex: 1;
     max-width: 443px;
+    min-width: 350px;
     margin-bottom: 30px;
-}
+    margin-right: 20px;
 
+    @include laptop {
+        max-width: 500px;
+        flex: auto;
+        margin-right: 0;
+    }
+}
+ 
 .user-about__pic {
     height: 392px;
     margin-bottom: 30px;    

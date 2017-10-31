@@ -1,3 +1,9 @@
+.socials {
+    @include tablet {
+        margin: 5px 0;
+    }
+}    
+
 .socials__item {
     @include inlineblock(middle);
     margin-right: 16px;

@@ -4,6 +4,15 @@
     padding-top: 60px;
     margin-left: 16.22%;
     background: $white;
+
+    @include laptop {
+        margin-left: 20.22%;
+    }
+
+    @include tablet {
+        width: 95%;
+        margin: auto;
+    }
 }
 
 .posts-list__item {

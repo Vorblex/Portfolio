@@ -1,5 +1,7 @@
 .nav__list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav__item {
@@ -7,6 +9,10 @@
 
     &:last-child {
         margin-right: 0;
+    }
+
+    @include phone {
+        margin-right: 15px;
     }
 }
 

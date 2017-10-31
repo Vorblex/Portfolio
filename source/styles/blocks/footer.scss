@@ -6,6 +6,10 @@
 
 .footer__top, .footer__bottom {
     padding: 10px 30px;
+
+    @include phone {
+        padding: 10px 10px;
+    }
 }
 
 .footer__top {
@@ -13,6 +17,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.footer__nav {
+    @include tablet {
+        margin: 20px 0;
+    }
+ 
 }
 
 .footer__bottom {
@@ -21,10 +36,19 @@
     justify-content: space-between;
     align-items: center;
     border-top: solid rgba(#e4e5e6, 0.1);
+
+    @include tablet {
+        flex-direction: column;
+    }
 }
 
 .footer__info {
     max-width: 30%;
+
+    @include tablet {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
     p {
         @include roboto(light);
         font-size: 16px;
@@ -34,6 +58,11 @@
 
 .footer__copyright {
     max-width: 30%;
+
+    @include tablet {
+        max-width: 100%;
+        margin-bottom: 5px;
+    }
     p {
         @include roboto(light);
         font-size: 16px;
