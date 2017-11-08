@@ -1,0 +1,20 @@
+.welcome {
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: #A1CCFD;
+    background-image: url('/assets/img/bg_header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.welcome__btn {
+    position: absolute;
+    top: 25px;
+    right: 100px;
+}

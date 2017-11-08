@@ -1,0 +1,75 @@
+- var title = "Welcome page"
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    meta(content="" name="author")
+    meta(content="" name="description")
+    meta(content="" name="keywords")
+
+    //- favicon block start
+    //- favicon block end
+
+    link(rel="stylesheet" href="/assets/css/foundation%=suffix=%.css%=version=%")
+    link(rel="stylesheet" href="/assets/css/main%=suffix=%.css%=version=%")
+
+  body
+    .welcome
+      button(class="btn btn_color_white btn_rounded welcome__btn" type="button") Авторизоваться
+      
+      .flipper
+        .flipper__container
+          .flipper__front
+            .flipper__content
+              .user.flipper__user-block
+                .user__pic(style=`background-image: url("/assets/img/user.jpg")`) 
+                .user__name.user__name_color_black.user__name_small Воробей Александр
+                .user__desc.user__desc_color_black Личный сайт веб разработчика
+
+              ul.socials
+                each item in [{name:"vk", link:"https://vk.com/"}, {name:"github", link: "https://github.com/"}, {name:"in", link: "https://www.linkedin.com/"}]
+                  li.socials__item
+                    a(href=`${item.link}`).socials__link= item.name
+                      svg.socials__icon.socials__icon_color_green
+                        use(xlink:href=`/assets/img/sprite.svg#${item.name}`)   
+
+            .buttons
+              a(href="#" class="btn btn_transp btn_separated") Мои работы  
+              a(href="#" class="btn btn_transp btn_separated") Обо мне  
+              a(href="#" class="btn btn_transp") Блог
+              
+          .flipper__back
+            form(class="login-form" id="loginForm" action="#" medhod="post")
+              .login-form__content
+                h2.subtitle Авторизуйтесь
+                label(class="input input_iconed")
+                  input(class="input__field" type="text" placeholder="Логин")
+                  svg.input__icon 
+                    use(xlink:href=`/assets/img/sprite.svg#login`)
+                label(class="input input_iconed")
+                  input(class="input__field" type="password" placeholder="Пароль")
+                  svg.input__icon 
+                    use(xlink:href=`/assets/img/sprite.svg#password`)
+                label(class="checkbox")
+                  input(class="checkbox__input" type="checkbox")
+                  svg.checkbox__icon
+                    use(xlink:href=`assets/img/sprite.svg#check`)
+                  span.checkbox__text Я человек
+
+                .radios
+                  .radios__title Вы точно не робот?
+                  input(class="radios__input" id="yes" type="radio" name="robot")
+                  label(class="radios__label" for="yes")
+                    span.radios__text Да
+                  input(class="radios__input" id="no" type="radio" name="robot")
+                  label(class="radios__label" for="no")
+                    span.radios__text Не уверен
+
+              .buttons
+                button(class="btn btn_hov_white btn_separated" type="submit") Отправить 
+                button(class="btn btn_hov_white" type="reset") Очистить
+

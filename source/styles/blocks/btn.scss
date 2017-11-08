@@ -8,6 +8,8 @@
     outline: none;
     border: none;
     background-color: $green;
+    text-align: center;
+    white-space: nowrap;
     @include roboto(medium);
     color: $white;
     font-size: 16px;
@@ -28,7 +30,24 @@
 
     &_separated {
         border-right: 2px solid;
-        border-right-color: transparentize(#dee3e7, .5);
+        border-right-color: rgba($white, .85);
+    }
+
+    &_color_white {
+        border: 1px solid $white;
+        background: none;
+        color: $white;
+
+        &:hover {
+            background: $white;
+            color: $green;
+        }
+    }
+
+    &_hov_white {
+        &:hover {
+            background: rgba($white, .85); 
+        }
     }
 
     &_transp {
@@ -48,4 +67,5 @@
     height: 20px;
     fill: $white;
 }
+
 

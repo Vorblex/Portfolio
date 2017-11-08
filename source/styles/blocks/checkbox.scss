@@ -1,0 +1,45 @@
+.checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 13px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        @include centered(y);
+        width: 20px;
+        height: 20px;
+        background: $green;
+        border-radius: 2px;
+    }
+}
+
+.checkbox__input {
+    position: absolute;
+    visibility: hidden;
+    &:checked {
+        ~.checkbox__icon {
+            opacity: 1;
+        }
+    }
+}
+
+.checkbox__text {
+    vertical-align: top;
+    font-size: 16;
+    @include roboto;
+    color: rgba($blue, 0.8);
+}
+
+.checkbox__icon {
+    position: absolute;
+    width: 12px;
+    height: 9px;
+    left: 4px;
+    @include centered(y);
+    fill: $white;
+    opacity: 0;
+}

@@ -1,0 +1,50 @@
+.flipper {
+    perspective: 1000px;
+
+    &:hover {
+        .flipper__container {
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+.flipper, .flipper__container {
+    width: 380px;
+    height: 399px;
+}
+
+.flipper__container {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flipper__front, .flipper__back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.flipper__front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.flipper__back {
+    transform: rotateY(180deg);
+}
+
+.flipper__content {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    padding: 40px;
+    background: rgba($white, .85);
+}
+
+.flipper__user-block {
+    margin-bottom: 35px;
+}

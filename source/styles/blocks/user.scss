@@ -5,7 +5,7 @@
     height: 140px;
     overflow: hidden;
     border-radius: 50%;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     background-position: center;
     background-size: cover;
 }
@@ -16,6 +16,14 @@
     color: $white;
     text-align: center;
     margin-bottom: 5px;
+
+    &_color_black {
+        color: $black;
+    }
+
+    &_small {
+        font-size: 28px;
+    }
 }
 
 .user__desc {
@@ -23,4 +31,8 @@
     font-size: 16px;
     color: rgba( $white, .8);
     text-align: center;
+
+    &_color_black {
+        color: $black;
+    }
 }

@@ -1,0 +1,9 @@
+.login-form__content {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+    padding: 28px 40px 30px 40px;
+    background: rgba($white, .85);
+}
