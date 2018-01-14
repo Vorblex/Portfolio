@@ -18,16 +18,24 @@ block content
               .subtitle Сайт школы онлайн образования
             .slider__desc HTML , CSS, JAVASCRIPT
             .slider__button
-              a(href="#").btn.btn_rounded.btn_iconed Посмотреть сайт
+              a(href="#").btn.btn_rounded.btn_iconed.slider__link Посмотреть сайт
                 svg.btn__icon 
                   use(xlink:href=`assets/img/sprite.svg#link`)
         .slider__view
-          img(class="slider__img" src="/assets/img/bg_slider.png", alt="slider image")
+          img(class="slider__img" src="", alt="slider image")
         .slider__controls
-          button(type="button").slider__prev
-            img(class="slider__button-img" src="/assets/img/btn-l.jpg", alt="slider thumb")
-          button(type="button").slider__next
-            img(class="slider__button-img" src="/assets/img/btn-r.jpg", alt="slider thumb")
+          button(type="button").slider__control.slider__control_prev
+            ul.slider__control-list
+              li.slider__control-item.active(data-src='/assets/img/slider/1.png', data-title='Агентсво интернет решений "ITLoft"', data-desc='node', data-link='http://itloft.ru/')
+                img(class="slider__control-img" src="/assets/img/slider/1.png", alt="slider thumb")
+              li.slider__control-item(data-src='/assets/img/slider/2.png', data-title='Школа онлай-образования "LoftSchool"', data-desc='html5, CSS3, javascript, php', data-link='http://loftschool.com/')
+                img(class="slider__control-img" src="/assets/img/slider/2.png", alt="slider thumb")
+              li.slider__control-item(data-src='/assets/img/slider/3.png', data-title='Портал обучающих уроков "LoftBlog"', data-desc='Ruby on Rails, javascript, RESTful', data-link='http://loftblog.ru/')
+                img(class="slider__control-img" src="/assets/img/slider/3.png", alt="slider thumb")
+              li.slider__control-item(data-src='/assets/img/slider/4.png', data-title='Сайт "Атма йога"', data-desc='UX, design, seo', data-link='http://atmayoga.ru/')
+                img(class="slider__control-img" src="/assets/img/slider/4.png", alt="slider thumb")
+            
+          button(type="button").slider__control.slider__control_next
 
   section.section.reviews
     .reviews__bg-wrap

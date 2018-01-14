@@ -39,6 +39,7 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "normalize.css": "^4.1.1",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "tapjs": "^1.0.9"
   }
 }

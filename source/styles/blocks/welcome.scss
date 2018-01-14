@@ -10,11 +10,14 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
 
 .welcome__btn {
     position: absolute;
     top: 25px;
     right: 100px;
+
+    @include tablet {
+        @include centered(x);
+    }
 }

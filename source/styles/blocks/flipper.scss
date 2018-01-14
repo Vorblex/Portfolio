@@ -6,6 +6,10 @@
             transform: rotateY(180deg);
         }
     }
+
+    @include tablet {
+        margin: 100px 0 80px 0;
+    }
 }
 
 .flipper, .flipper__container {
