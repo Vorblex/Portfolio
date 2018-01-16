@@ -8,7 +8,7 @@
 //------------ import
 // import map from './map';
 import Slider from './slider.js';
-let slider = new Slider($('.slider'));
+let slider = new Slider($('.slider'), 700);
 slider.init();
 
 // map();
