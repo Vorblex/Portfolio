@@ -17,6 +17,10 @@
     top: 25px;
     right: 100px;
 
+    &.hide {
+        top: -50px;
+    }
+
     @include tablet {
         @include centered(x);
     }

@@ -1,5 +1,9 @@
 'use strict';
 
+// ==========================================
+// *********** Slider *********** //
+// ==========================================
+
 export default class Slider {  
   constructor(sliderContainer, durationTime = 500)     {     
     this.prevBtn = sliderContainer.find('.slider__control_prev');
@@ -41,35 +45,28 @@ export default class Slider {
     let generateAnimatedText = (string, block) => {      
       let
         text = string.trim(),
+        lettersArray = text.split(''),
         wordsArray = text.split(' '),
+        newTextLength = lettersArray.length - wordsArray.length + 1,
+        delayBase = duration / 1000 / newTextLength,
+        letterNdx = 0,
         tempWord = [],
         newText = '';
-  
+        
       wordsArray.forEach( (word, ndx) => {
         tempWord = word.split('');
         let newWord = ''; 
-        
+          
         tempWord.forEach(letter => {
-          newWord += `<span class="letter">${letter}</span>`;
+          letterNdx++;
+          newWord += `<span class="letter" style="animation-delay: ${delayBase * (letterNdx + 1)}s">${letter}</span>`;
         });
-
         newText += `<span class="word">${newWord}</span>`;
         if(ndx < wordsArray.length -1) newText += '<span> </span>';
       });
-  
+        
       block.html(newText);
-  
-      let 
-        letters = block.find('.letter'),
-        counter = 0,
-        timer = undefined;
-  
-      (function animation () {
-        letters.eq(counter).addClass('animated');
-        counter++;
-        if(timer !== undefined) clearTimeout(timer);
-        timer = setTimeout(animation, duration / letters.length);
-      }());
+      block.find('.letter').addClass('animated');
 
     }; 
 

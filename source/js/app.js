@@ -6,23 +6,28 @@
 //================================================================//
 
 //------------ import
-// import map from './map';
+
+import preloader from './preloader.js';
+import mainNav from './main-nav.js';
+import flipper from './flipper.js';
 import Slider from './slider.js';
-let slider = new Slider($('.slider'), 700);
-slider.init();
+import map from './map';
 
-// map();
+//------------ init
+
 svg4everybody();
+preloader();
+flipper();
 
-let hamburger = document.querySelector('.hamburger');
-hamburger.addEventListener('tap', (e) => {
-  e.preventDefault();
-  let nav = document.querySelector('.main-nav');
-  if(!nav.classList.contains('active')) {
-    hamburger.classList.add('active');
-    nav.classList.add('active');
-  } else {
-    hamburger.classList.remove('active');
-    nav.classList.remove('active');
-  }
-});
+if($('.main-nav').length) {
+  mainNav($('.main-nav'), $('.hamburger'));
+}
+
+if($('.slider').length) {
+  let slider = new Slider($('.slider'), 700);
+  slider.init();
+}
+
+if($('#map').length) {
+  map();
+}

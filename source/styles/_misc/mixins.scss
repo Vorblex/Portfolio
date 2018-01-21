@@ -35,21 +35,27 @@
 }
  
 @mixin hd {
-	@media screen and (max-width:1200px) {
+	@media screen and (max-width: 1200px) {
 		@content;
 	}
 }
 @mixin laptop {
-	@media screen and (max-width:992px) {
+	@media screen and (max-width: 992px) {
 		@content;
 	}
 }
 @mixin tablet {
-	@media screen and (max-width:768px) {
+	@media screen and (max-width: 768px) {
 		@content;
 	}
-}@mixin phone {
-	@media screen and (max-width:480px) {
+}	
+@mixin phone {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+@mixin landscape {
+	@media screen and (orientation: landscape) {
 		@content;
 	}
 }

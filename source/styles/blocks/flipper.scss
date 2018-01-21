@@ -1,12 +1,19 @@
 .flipper {
     perspective: 1000px;
-
-    &:hover {
+    
+    &.unloaded {
+        .flipper__container {
+            transform: rotateX(-60deg) translateY(-20px);
+            opacity: 0;
+        }
+    }
+    
+    &.active {
         .flipper__container {
             transform: rotateY(180deg);
         }
     }
-
+    
     @include tablet {
         margin: 100px 0 80px 0;
     }
@@ -18,14 +25,16 @@
 }
 
 .flipper__container {
-    transition: 0.6s;
-    transform-style: preserve-3d;
     position: relative;
+    transition: 0.7s;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    opacity: 1;
 }
 
 .flipper__front, .flipper__back {
-    backface-visibility: hidden;
     position: absolute;
+    backface-visibility: hidden;
     top: 0;
     left: 0;
 }
@@ -41,12 +50,25 @@
 
 .flipper__content {
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 380px;
     align-items: center;
     border-radius: 5px 5px 0 0;
     padding: 40px;
     background: rgba($white, .85);
+    z-index: 1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: rgba($white, .85);
+        z-index: 0;
+    }
 }
 
 .flipper__user-block {

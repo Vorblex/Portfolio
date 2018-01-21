@@ -18,10 +18,11 @@ html(lang="ru")
     link(rel="stylesheet" href="/assets/css/main%=suffix=%.css%=version=%")
 
   body
+    include ../common/preloader.pug
     .welcome
-      button(class="btn btn_color_white btn_rounded welcome__btn" type="button") Авторизоваться
+      button(id="flipBtn" class="btn btn_color_white btn_rounded welcome__btn" type="button") Авторизоваться
       
-      .flipper
+      .flipper.unloaded
         .flipper__container
           .flipper__front
             .flipper__content
@@ -36,7 +37,6 @@ html(lang="ru")
                     a(href=`${item.link}`).socials__link= item.name
                       svg.socials__icon.socials__icon_color_green
                         use(xlink:href=`/assets/img/sprite.svg#${item.name}`)   
-
             .buttons
               a(href="#" class="btn btn_transp btn_separated") Мои работы  
               a(href="#" class="btn btn_transp btn_separated") Обо мне  
@@ -72,4 +72,6 @@ html(lang="ru")
               .buttons
                 button(class="btn btn_hov_white btn_separated" type="submit") Отправить 
                 button(class="btn btn_hov_white" type="reset") Очистить
+    script(src="/assets/js/foundation%=suffix=%.js%=version=%")
+    script(src="/assets/js/app%=suffix=%.js%=version=%")
 
