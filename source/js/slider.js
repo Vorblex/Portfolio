@@ -1,13 +1,14 @@
 'use strict';
 
 // ==========================================
-// *********** Slider *********** //
+// Slider
 // ==========================================
 
 export default class Slider {  
   constructor(sliderContainer, durationTime = 500)     {     
     this.prevBtn = sliderContainer.find('.slider__control_prev');
     this.nextBtn = sliderContainer.find('.slider__control_next');
+
 
     let 
       container = sliderContainer,
@@ -111,6 +112,7 @@ export default class Slider {
         rightNextItem: itemsNext.eq(slide + 1 > itemsLength - 1 ? 0 : slide + 1)
       };
  
+      
       let changeItem = (type = 'left') => {
         let 
           active = type + 'ActiveItem',

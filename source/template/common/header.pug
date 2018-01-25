@@ -1,4 +1,6 @@
 header.header
+  +parallax
+
   ul.socials.header__socials
     each item in [{name:"vk", link:"https://vk.com/"}, {name:"github", link: "https://github.com/"}, {name:"in", link: "https://www.linkedin.com/"}]
       li.socials__item
@@ -14,7 +16,12 @@ header.header
     .user.header__user-block
       .user__pic(style=`background-image: url("/assets/img/user.jpg")`) 
       .user__name Воробей Александр
-      .user__desc Личный сайт веб разработчика 
-  a(href="#").down-arrow
-    svg.down-arrow__icon
-      use(xlink:href="/assets/img/sprite.svg#portf_arrow_down")     
+      .user__desc Личный сайт веб разработчика
+  if title === 'Works page'     
+    +arrow("down", ".works__slider")
+
+  if title === 'Blog page'     
+    +arrow("down", ".blog")
+
+  if title === 'About page'     
+    +arrow("down", ".about")

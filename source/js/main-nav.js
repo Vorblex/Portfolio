@@ -1,6 +1,12 @@
-export default function(menu, trigger) {
+'use strict';
+
+// ==========================================
+// Main menu toggle and active class highlighted 
+// ==========================================
+
+export default function(trigger) {
   let
-    nav = menu,
+    nav = $('.main-nav'),
     navItems = nav.find('.main-nav__item'),
     navLinks = nav.find('.main-nav__link');
 

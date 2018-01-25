@@ -1,3 +1,9 @@
+'use strict';
+
+// ==========================================
+// Google map
+// ==========================================
+
 export default function () {
   var Maps;
   var Routes;

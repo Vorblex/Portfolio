@@ -12,3 +12,14 @@ mixin triangle(leftFill= '', rightFill= leftFill)
           class="triangle")
         polygon(points="0,0 0,100 500.6,100" class=`${leftFill}`)
         polygon(points="500.6,100 1000,0 1000,100 " class=`${rightFill}`)
+
+
+mixin parallax(additionClass = '')
+  ul(class=`parallax ${additionClass}`) 
+    - for(var i = 1; i < 10; i++)
+        li(class=`parallax__item parallax__item_${i}`)
+
+mixin arrow(direction, target)
+  a(href="#" class=`${direction === 'down' ? 'down-arrow': 'up-arrow'}` data-target=`${target || ''}`)
+    svg(class=`${direction}-arrow__icon`)
+      use(xlink:href=`/assets/img/sprite.svg#portf_arrow_${direction}`) 

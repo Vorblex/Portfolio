@@ -12,7 +12,10 @@
     width: 100%;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
-    background: url("/assets/img/bg_mail-form.jpg") center / cover no-repeat;
+    background: $white url('/assets/img/bg_reviews.jpg') no-repeat;
+    background-position: center top;
+    background-size: 2000px;
+    filter: blur(20px);
 }
 
 .mail-form__title {

@@ -3,23 +3,7 @@ include mixins/mixins
 
 doctype html
 html(lang="ru")
-  head
-    meta(charset="utf-8")
-    title #{title}
-    meta(content="width=device-width, initial-scale=1" name="viewport")
-    meta(content="ie=edge" http-equiv="x-ua-compatible")
-    meta(content="" name="author")
-    meta(content="" name="description")
-    meta(content="" name="keywords")
-
-    //- favicon block start
-    //- favicon block end
-
-    link(rel="stylesheet" href="/assets/css/foundation%=suffix=%.css%=version=%")
-    link(rel="stylesheet" href="/assets/css/main%=suffix=%.css%=version=%")
-
-
-
+  include ./common/head
   body
     include ./common/main-nav
     if title == "Blog page"

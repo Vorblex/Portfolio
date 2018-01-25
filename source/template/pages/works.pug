@@ -38,8 +38,6 @@ block content
           button(type="button").slider__control.slider__control_next
 
   section.section.reviews
-    .reviews__bg-wrap
-      img(class="reviews__bg" src="/assets/img/bg_reviews.jpg" alt="background")
     .reviews__title-section
       +title("Что обо мне говорят", "about_header", "reviews__title")
 
@@ -75,7 +73,7 @@ block content
 
       .reviews__contacts
         .mail-form
-          .mail-form__bg
+          .mail-form__bg#blur
           .mail-form__title
             .subtitle Связаться со мной
           form(class="mail-form__form" id="mailForm" method="post" action="#")

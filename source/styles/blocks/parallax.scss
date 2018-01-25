@@ -1,0 +1,46 @@
+.parallax {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/img/parallax/parallax_bg.png');
+    background-position: center center;
+    background-size: cover;
+
+    &_welcome {
+        top: -5%;
+        left: -5%;
+        right: -5%;
+        bottom: -5%;
+    }
+
+    @include tablet {
+        display: none;
+        background: none;
+    }
+}
+
+@for $i from 1 through 9 {
+    .parallax__item_#{$i} {
+        background-image: url('/assets/img/parallax/parallax_layer#{$i}.png');
+    }
+}
+
+.parallax__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center center;
+    will-change: transform;
+
+    @include tablet {
+        transform: none;
+        background: none;
+        will-change: auto;
+    }
+}

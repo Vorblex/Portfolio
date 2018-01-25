@@ -2,25 +2,13 @@
     position: relative;
     min-height: $sectionHeight;
     padding-top: 20px;
+    background: $white url('/assets/img/bg_reviews.jpg') no-repeat;
+    background-position: center top;
+    background-size: 2000px;
 
-    @include phone {
+    @include tablet {
         padding-bottom: 120px;
     }
-}
-
-.reviews__bg-wrap {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    overflow: hidden;
-}
-
-.reviews__bg {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
 }
 
 .reviews__title-section {
