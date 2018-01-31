@@ -7,6 +7,10 @@
 .socials__item {
     @include inlineblock(middle);
     margin-right: 16px;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .socials__link {

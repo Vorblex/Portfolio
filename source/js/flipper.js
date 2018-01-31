@@ -1,5 +1,3 @@
-'use strict';
-
 // ==========================================
 // Flip actions on welcome page
 // ==========================================
@@ -10,7 +8,7 @@ export default function() {
     flipper = $('.flipper'),
     button = $('#flipBtn');
    
-  button.on('tap', function(e) {
+  button.on('tap', function() {
     flipper.addClass('active');
     $(this).addClass('hide');
   });

@@ -1,5 +1,3 @@
-'use strict';
-
 // ==========================================
 // Main menu toggle and active class highlighted 
 // ==========================================
@@ -19,8 +17,10 @@ export default function(trigger) {
 
   
   navLinks.each(function() {
-    let $this = $(this),
+    let
+      $this = $(this),
       url = $(location)[0].pathname;
+      
     if($this.attr('href') === url) {
       $this.addClass('active');
     }
@@ -28,8 +28,8 @@ export default function(trigger) {
 
   
   navItems.each(function(index) {
-    let item_delay = 0.3 + 0.1 * index;
-    $(this).css('transition-delay', item_delay + 's');
+    let itemDelay = 0.3 + 0.1 * index;
+    $(this).css('transition-delay', itemDelay + 's');
   });
 }
 

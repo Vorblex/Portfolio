@@ -6,7 +6,7 @@ html(lang="ru")
   include ../common/head
   
   body
-    include ../common/preloader.pug
+    include ../common/preloader
     +parallax("parallax_welcome")
     .welcome
       button(id="flipBtn" class="btn btn_color_white btn_rounded welcome__btn" type="button") Авторизоваться
@@ -61,6 +61,6 @@ html(lang="ru")
               .buttons
                 button(class="btn btn_hov_white btn_separated" type="submit") Отправить 
                 button(class="btn btn_hov_white" type="reset") Очистить
-    script(src="/assets/js/foundation%=suffix=%.js%=version=%")
-    script(src="/assets/js/app%=suffix=%.js%=version=%")
+                
+    include ../common/scripts            
 

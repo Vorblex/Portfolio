@@ -36,7 +36,16 @@ body {
 }
 
 .maincontent {
+    position: relative;
     flex-grow: 1;
+    
+    @include tablet {
+        transition: transform .5s;
+    
+        &.active {
+            transform: translateX(80%);
+        }
+    }
 }
 
 .container {

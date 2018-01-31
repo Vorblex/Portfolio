@@ -7,6 +7,10 @@
     @include tablet {
         background: #9ED1FA url("/assets/img/bg_header.jpg") center no-repeat;
         background-size: cover;
+
+        @include landscape {
+            padding-bottom: 600px;
+        }
     }
 }
 

@@ -1,5 +1,3 @@
-'use strict';
-
 // ==========================================
 // Parallax
 // ==========================================
@@ -37,7 +35,7 @@ export default {
     
     items.each(function(i) {
       
-      translate = `translate3d(0, ${strafe * (i - 4)}%, 0)`;
+      translate = `translate3d(0, ${strafe * (i - 9)}%, 0)`;
       
       container.css('opacity', 1 - wScroll / 2000);
       

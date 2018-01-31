@@ -3,8 +3,13 @@
     z-index: 400;
     top: $sectionHeight;
     right: 73%;
-    transform: translateY(70px);
     width: 25.7%;
+    padding-top: 72px;
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+    }
 
     @include laptop {
         width: 29.7%;
@@ -16,24 +21,38 @@
         background: $green;
         right: auto;
         top: 0;
-        height: 100%;
+        bottom: 0;
         width: 81%;
-        transform: translateY(0px);
+        transform: translateZ(0);
+        transition: transform .5s;
         transform: translateX(-100%);
-    }
-}
+        padding-top: 0;
 
-.wrapper {
-    // transform: translateX(80%);
+        &::before {
+            content: "";
+            position: absolute;
+            background: $green;
+            left: 0;
+            right: 0;
+            height: 50%;
+            bottom: 100%;
+
+        }
+    }
+
+    &.active {
+        transform: translateX(0%);
+    }
+
 }
 
 .menu__toggle {
     @include tablet {
         position: absolute;
-        right: -9px;
+        right: -11px;
         @include centered(y);
-        width: 60px;
-        height:60px;
+        width: 80px;
+        height:80px;
         border-radius: 50%;
         background: $green;
     }
@@ -41,15 +60,32 @@
 
 .menu__list {
     @include tablet {
-        position: relative;
+        width: 95%;
+        position: absolute;
         @include centered(y);
-        // visibility: hidden;
     }
 }
 
 .menu__item {
     text-align: right;
     margin-bottom: 10px;
+
+    &.active {
+        .menu__link {
+            color: $green;
+
+            &::after {
+                opacity: 1;
+            }
+        } 
+        
+        @include tablet {
+            .menu__link {
+                color: $white;
+                opacity: 1;
+            }
+        }
+    }
 }
 
 .menu__link {
@@ -63,10 +99,14 @@
     transition: opacity .3s, color .3s;
 
     &:hover {
-        @include roboto(bold);
         color: $green;
+
+        &::after {
+            opacity: .2;
+        }
     }
 
+    
     &::after {
         content: "";
         position: absolute;
@@ -75,15 +115,18 @@
         right: 20px;
         width: 3px;
         background: $green;
+        opacity: 0;
+
+        @include tablet {
+            display: none;
+        } 
     }
+    
 
     @include tablet {
         color: $white;
-        opacity: .7;
-
-        &::after {
-            display: none;
-        }
+        color: rgba(#fff, 0.7);
+        padding: 10px 0px 10px 0px;
 
         &:hover {
             opacity: 1;

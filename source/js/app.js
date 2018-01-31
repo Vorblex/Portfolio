@@ -6,6 +6,7 @@
 //================================================================//
 
 //------------ import
+import blogScroll from './blog-scroll.js';
 import pageScroll from './pageScroll.js';
 import preloader from './preloader.js';
 import parallax from './parallax.js';
@@ -16,7 +17,6 @@ import blur from './blur.js';
 import map from './map';
 
 //------------ init
-
 preloader();
 svg4everybody();
 
@@ -39,7 +39,12 @@ if($('.welcome').length) {
   flipper();
 } else {
   $(window).on('scroll', parallax.scroll);
+  $(window).on('resize', pageScroll);
   pageScroll();
+}
+
+if($('.blog').length) {
+  blogScroll();
 }
 
 if($('#map').length) {

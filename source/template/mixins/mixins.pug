@@ -19,6 +19,7 @@ mixin parallax(additionClass = '')
     - for(var i = 1; i < 10; i++)
         li(class=`parallax__item parallax__item_${i}`)
 
+
 mixin arrow(direction, target)
   a(href="#" class=`${direction === 'down' ? 'down-arrow': 'up-arrow'}` data-target=`${target || ''}`)
     svg(class=`${direction}-arrow__icon`)

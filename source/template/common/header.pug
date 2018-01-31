@@ -12,16 +12,16 @@ header.header
     .hamburger__elem  
   .header__title
     svg.section-title
-      use(xlink:href="/assets/img/sprite.svg#portfolio_header")
+      use(xlink:href=`/assets/img/sprite.svg#${title.toLowerCase().split(' ')[0]}_header`)
     .user.header__user-block
       .user__pic(style=`background-image: url("/assets/img/user.jpg")`) 
       .user__name Воробей Александр
       .user__desc Личный сайт веб разработчика
-  if title === 'Works page'     
-    +arrow("down", ".works__slider")
-
-  if title === 'Blog page'     
-    +arrow("down", ".blog")
-
-  if title === 'About page'     
-    +arrow("down", ".about")
+      
+  case title
+    when 'Works page'    
+      +arrow("down", ".works__slider")
+    when 'Blog page'
+      +arrow("down", ".blog")
+    when 'About page'
+      +arrow("down", ".about")

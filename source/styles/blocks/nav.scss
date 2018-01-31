@@ -19,6 +19,7 @@
 .nav__link {
     display: block;
     text-decoration: none;
+    padding: 10px 0;
     @include roboto(medium);
     font-size: 16px;
     color: $white;
@@ -26,5 +27,9 @@
 
     &:hover {
         color: $green;
+    }
+
+    @include tablet {
+        padding: 0;
     }
 }

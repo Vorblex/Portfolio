@@ -5,17 +5,15 @@ doctype html
 html(lang="ru")
   include ./common/head
   body
-    include ./common/main-nav
-    if title == "Blog page"
-      include ./common/menu.pug
     .wrapper
+      include ./common/main-nav
+      if title == "Blog page"
+        include ./common/menu
       .maincontent
         include ./common/header
         block content
       include ./common/footer 
     
-    include ./common/preloader.pug
+    include ./common/preloader
 
-    
-    script(src="/assets/js/foundation%=suffix=%.js%=version=%")
-    script(src="/assets/js/app%=suffix=%.js%=version=%")
+    include ./common/scripts

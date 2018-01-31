@@ -48,6 +48,7 @@
     @include tablet {
         max-width: 100%;
         margin-bottom: 20px;
+        text-align: center;
     }
     p {
         @include roboto(light);
@@ -59,13 +60,15 @@
 .footer__copyright {
     max-width: 30%;
 
-    @include tablet {
-        max-width: 100%;
-        margin-bottom: 5px;
-    }
     p {
         @include roboto(light);
         font-size: 16px;
         color: rgba($white, .5);
     }
+    
+    @include tablet {
+        max-width: 100%;
+        margin-bottom: 5px;
+    }
+    
 }
