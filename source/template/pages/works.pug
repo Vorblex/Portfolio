@@ -38,12 +38,12 @@ block content
           button(type="button").slider__control.slider__control_next
 
   section.section.reviews
-    .reviews__title-section
+    .reviews__title-section.animated(data-animate="toTop")
       +title("Что обо мне говорят", "about_header", "reviews__title")
 
     .reviews__content
       .reviews__section
-        ul.reviews-list
+        ul.reviews-list.animated(data-animate="toTop")
           li.reviews-list__item
             .review
               svg.review__icon 
