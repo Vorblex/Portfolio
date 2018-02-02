@@ -11,6 +11,12 @@ html {
    @include phone {
        font-size: 13px;
    }
+
+   &.index {
+    @include tablet {
+        font-size: 3vmin;
+    }
+   }
 }
 
 body,

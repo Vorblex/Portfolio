@@ -11,7 +11,8 @@
 
 .circle__second {
     stroke: $circleSecond;
-    // stroke-dasharray: .0010 282.6;
-    transition: stroke-dasharray 1.5s;
+    stroke-dasharray: 282.6;
+    stroke-dashoffset: 282.6;
+    transition: stroke-dashoffset 1.5s;
 }
 
