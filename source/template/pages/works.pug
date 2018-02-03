@@ -76,7 +76,9 @@ block content
           .mail-form__bg#blur
           .mail-form__title
             .subtitle Связаться со мной
-          form(class="mail-form__form" id="mailForm" method="post" action="#")
+          form(class="mail-form__form" id="mailForm" role="form")
+            .form-message.form-message_success
+            .form-message.form-message_error
             .mail-form__fields
               label(class="input")
                 input(class="input__field" type="text" name="name" placeholder="Имя")
@@ -85,6 +87,6 @@ block content
               textarea(placeholder="Введите ваше сообщение").textarea
 
             .buttons
-              button(class="btn btn_transp btn_separated" type="submit") Отправить 
+              button(class="btn btn_transp btn_separated" id="sendMail" type="submit") Отправить 
               button(class="btn btn_transp" type="reset") Очистить
             

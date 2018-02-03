@@ -24,6 +24,7 @@
 .settings
 .tmproj
 .vscode
+mail.php
 Thumbs.db
 
 # Folders to ignore

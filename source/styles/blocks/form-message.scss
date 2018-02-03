@@ -1,0 +1,15 @@
+.form-message {    
+    text-align: center;
+    position: absolute;
+    bottom: 103%;
+    @include centered(x);
+    @include roboto(bold);
+
+    &_success {
+        color: $green;
+    }
+
+    &_error {
+        color: $red;
+    }
+}
