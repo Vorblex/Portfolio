@@ -37,7 +37,7 @@ export default class Slider {
         dataObject.links.push($(item).data('link'));
       }
 
-      return dataObject;
+      return dataObject; 
     }());
    
 
@@ -65,7 +65,7 @@ export default class Slider {
       });
         
       block.html(newText);
-      block.find('.letter').addClass('animated');
+      block.find('.letter').addClass('animate');
 
     }; 
 

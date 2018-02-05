@@ -4,6 +4,12 @@
     padding-top: 30px;
 }
 
+.mail-form__form-message {
+    position: absolute;
+    bottom: 103%;
+    @include centered(x);
+}
+
 .mail-form__bg {
     position: absolute;
     top: 0;

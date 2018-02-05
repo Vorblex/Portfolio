@@ -15,6 +15,12 @@
         background: $green;
         border-radius: 2px;
     }
+
+    &.error { 
+        &::before {
+            background: rgba($red, .2);
+        }
+    }
 }
 
 .checkbox__input {

@@ -10,7 +10,7 @@ import animationsCss from './animationsCss.js';
 import blogScroll from './blogScroll.js';
 import pageScroll from './pageScroll.js';
 import preloader from './preloader.js';
-import mailForm from './mailForm.js';
+import ajaxForm from './ajaxForm.js';
 import parallax from './parallax.js';
 import mainNav from './mainNav.js';
 import flipper from './flipper.js';
@@ -18,11 +18,11 @@ import Slider from './slider.js';
 import blur from './blur.js';
 import map from './map';
 
-mailForm();
 //------------ init
 
 preloader();
 svg4everybody();
+ajaxForm();
 
 if($('.main-nav').length) {
   mainNav($('.hamburger'));

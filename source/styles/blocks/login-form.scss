@@ -7,3 +7,9 @@
     padding: 28px 40px 30px 40px;
     background: rgba($white, .85);
 }
+
+.login-form__form-message {
+    position: absolute;
+    top: 19%;
+    @include centered(x);
+}

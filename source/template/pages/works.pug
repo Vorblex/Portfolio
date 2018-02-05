@@ -26,7 +26,7 @@ block content
         .slider__controls
           button(type="button").slider__control.slider__control_prev
             ul.slider__control-list
-              li.slider__control-item.active(data-src='/assets/img/slider/1.png', data-title='Агентсво интернет решений "ITLoft"', data-desc='node', data-link='http://itloft.ru/')
+              li.slider__control-item(data-src='/assets/img/slider/1.png', data-title='Агентсво интернет решений "ITLoft"', data-desc='node', data-link='http://itloft.ru/')
                 img(class="slider__control-img" src="/assets/img/slider/1.png", alt="slider thumb")
               li.slider__control-item(data-src='/assets/img/slider/2.png', data-title='Школа онлай-образования "LoftSchool"', data-desc='html5, CSS3, javascript, php', data-link='http://loftschool.com/')
                 img(class="slider__control-img" src="/assets/img/slider/2.png", alt="slider thumb")
@@ -76,15 +76,15 @@ block content
           .mail-form__bg#blur
           .mail-form__title
             .subtitle Связаться со мной
-          form(class="mail-form__form" id="mailForm" role="form")
-            .form-message.form-message_success
-            .form-message.form-message_error
+          form(class="mail-form__form" id="mailForm" action="/mail.php" medhod="post" role="form")
+            .form-message.form-message_success.mail-form__form-message
+            .form-message.form-message_error.mail-form__form-message
             .mail-form__fields
               label(class="input")
-                input(class="input__field" type="text" name="name" placeholder="Имя")
+                input(class="input__field" type="text" name="name" placeholder="Имя" qtip-content="Введите ваше имя" qtip-position="left")
               label(class="input")  
-                input(class="input__field" type="email" name="email" placeholder="Email")
-              textarea(placeholder="Введите ваше сообщение").textarea
+                input(class="input__field" type="email" name="email" placeholder="Email" qtip-content="Введите ваш email" qtip-position="left")
+              textarea(placeholder="Введите ваше сообщение" name="message" qtip-content="Вы не ввели сообщение" qtip-position="left").textarea
 
             .buttons
               button(class="btn btn_transp btn_separated" id="sendMail" type="submit") Отправить 

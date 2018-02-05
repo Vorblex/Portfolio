@@ -32,29 +32,31 @@ html(lang="ru" class="index")
               a(href="/blog.html" class="btn btn_transp") Блог
               
           .flipper__back
-            form(class="login-form" id="loginForm" action="#" medhod="post")
+            form(class="login-form" id="loginForm" action="/auth.php" medhod="post" role="form")
               .login-form__content
+                .form-message.form-message_success.login-form__form-message
+                .form-message.form-message_error.login-form__form-message
                 h2.subtitle Авторизуйтесь
                 label(class="input input_iconed")
-                  input(class="input__field" type="text" placeholder="Логин")
+                  input(class="input__field" name="login" type="text" placeholder="Логин" qtip-content="Введите логин")
                   svg.input__icon 
                     use(xlink:href=`/assets/img/sprite.svg#login`)
                 label(class="input input_iconed")
-                  input(class="input__field" type="password" placeholder="Пароль")
+                  input(class="input__field" name="password" type="password" placeholder="Пароль" qtip-content="Введите пароль")
                   svg.input__icon 
                     use(xlink:href=`/assets/img/sprite.svg#password`)
                 label(class="checkbox")
-                  input(class="checkbox__input" type="checkbox")
+                  input(class="checkbox__input" type="checkbox" name="ishuman")
                   svg.checkbox__icon
                     use(xlink:href=`assets/img/sprite.svg#check`)
                   span.checkbox__text Я человек
 
                 .radios
                   .radios__title Вы точно не робот?
-                  input(class="radios__input" id="yes" type="radio" name="robot")
+                  input(class="radios__input" id="yes" type="radio" name="robot" value="1")
                   label(class="radios__label" for="yes")
                     span.radios__text Да
-                  input(class="radios__input" id="no" type="radio" name="robot")
+                  input(class="radios__input" id="no" type="radio" name="robot" value='0')
                   label(class="radios__label" for="no")
                     span.radios__text Не уверен
 

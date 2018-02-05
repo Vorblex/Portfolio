@@ -84,7 +84,7 @@
         will-change: transform;
         opacity: 0;
     
-        &.animated {
+        &.animate {
             animation-duration: .75s;
             animation-fill-mode: forwards;
             animation-name: showLetter;
